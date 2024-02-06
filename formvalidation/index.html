@@ -1,0 +1,90 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <link rel="stylesheet" href="style.css">
+  
+  <title> Form Validation </title>
+  
+</head>
+<body>
+
+  <form id="myForm">
+
+    <h1>Registration</h1>
+
+    <div class="input-text" >
+    <label for="name">Name:</label>
+    <input type="text" id="name" name="name"  maxlength="25" required  >
+    <div class="error" id="nameError"></div>
+    </div>
+
+    <div class="input-text">
+    <label for="email">Email:</label>
+    <input type="email" id="email" name="email" maxlength="30" required>
+    <div class="error" id="emailError"></div>
+    </div>
+    
+    <div class="input-text">
+    <label for="phone">Phone:</label>
+    <input type="text" id="phone" name="phone" maxlength="10" required>
+    <div class="error" id="phoneError"></div>
+    </div>
+
+    <div class="input-text" >
+    <label for="dob">Date of Birth:</label> 
+    <input type="date" id="dob" name="dob" required>
+    <div class="error" id="dobError"></div>
+   </div>
+
+    <div class="input-text" id="visibility">
+      
+    <label for="password">Password:</label>
+    <div class="password-container">
+    <input type="password" id="password" name="password" maxlength="12" required>
+    <a class="toggle-password-button" id="toggle-password-button">
+      <img loading="lazy" src="https://cdn-icons-png.flaticon.com/512/633/633655.png"
+      id="closed-eye">
+      <img loading="lazy" src="https://cdn-icons-png.flaticon.com/512/633/633633.png"
+      id="open-eye" class="hide">
+      </a>  
+  </div>
+    <div class="error" id="passwordError"></div>
+    <p>
+       
+      <span class="hidden-content">
+        * Password must be atleast 8 characters<br>
+        * Password must be less than 12 characters<br>
+        * Password must have atleast one special character<br>
+        * Password must have atleast one uppercase letter<br>
+      * Password must have atleast one lowercase letter<br>
+    * Password must have atleast one number<br>
+  
+      </span>
+      <span class="read-more-btn" onclick="toggleReadMore()">Read More</span>
+    </p>
+  
+   
+   </div>
+
+    <div class="input-text">
+    <label for="confirmPassword">Confirm Password:</label>
+    <div class="conpassword-container">
+    <input type="password" id="confirmPassword" name="confirmPassword" required>
+    <a class="toggle-conpassword-button" id="toggle-conpassword-button">
+      <img loading="lazy" src="https://cdn-icons-png.flaticon.com/512/633/633655.png"
+      id="closed-eye1">
+      <img loading="lazy" src="https://cdn-icons-png.flaticon.com/512/633/633633.png"
+      id="open-eye1" class="hide">
+      </a>  
+    </div>
+    <div class="error" id="confirmPasswordError"></div>
+   </div>
+
+<button type="submit" id="submitBtn" >Submit</button>
+  </form>
+  <script src="script.js"></script>
+</body>
+
+</html>
